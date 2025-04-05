@@ -5,6 +5,7 @@ import { Geist } from "next/font/google";
 
 import { TRPCReactProvider } from "@/trpc/react";
 import { Toaster } from "sonner";
+import { NuqsAdapter } from "node_modules/nuqs/dist/_tsup-dts-rollup";
 
 export const metadata: Metadata = {
   title: "Voting CMS",
@@ -24,8 +25,10 @@ export default function RootLayout({
     <html lang="en" className={`${geist.variable}`}>
       <body>
         <TRPCReactProvider>
-          <Toaster richColors />
-          {children}
+          <NuqsAdapter>
+            {children}
+            <Toaster richColors />
+          </NuqsAdapter>
         </TRPCReactProvider>
       </body>
     </html>

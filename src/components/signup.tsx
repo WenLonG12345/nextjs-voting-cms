@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { authClient } from "@/lib/auth-client";
 import { signinGoogle } from "@/lib/social-login";
-import { AiOutlineLoading } from "react-icons/ai";
+import { RiLoader3Line } from "@remixicon/react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
@@ -105,7 +105,7 @@ export function SignUp() {
             </div>
 
             <Button className="w-full" onClick={signUp} disabled={loading}>
-              {loading && <AiOutlineLoading className="animate-spin" />}
+              {loading && <RiLoader3Line className="animate-spin" />}
               Sign Up
             </Button>
           </div>
