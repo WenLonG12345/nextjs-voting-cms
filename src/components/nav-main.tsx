@@ -1,46 +1,39 @@
 "use client";
 
 import { SidebarMenu, SidebarMenuButton } from "@/components/ui/sidebar";
-import {
-  RiDashboardLine,
-  RiFileList3Line,
-  RiGroupLine,
-  RiPieChart2Fill,
-  RiStoreLine,
-  RiToolsFill,
-} from "@remixicon/react";
+import { BookCopy, LayoutDashboard, Store, Users, ChartPie, HardHat } from "lucide-react";
 import { usePathname } from "next/navigation";
 
 const navItems = [
   {
     name: "Dashboard",
     url: "/cms",
-    avatar: RiDashboardLine,
+    avatar: LayoutDashboard,
   },
   {
     name: "Campaigns",
     url: "/cms/campaigns",
-    avatar: RiFileList3Line,
+    avatar: BookCopy,
   },
   {
     name: "Vortal List",
     url: "/cms/vortals",
-    icon: RiStoreLine,
+    icon: Store,
   },
   {
     name: "Users",
     url: "/cms/users",
-    icon: RiGroupLine,
+    icon: Users,
   },
   {
     name: "Reports",
     url: "/cms/reports",
-    icon: RiPieChart2Fill,
+    icon: ChartPie,
   },
   {
     name: "Configs",
     url: "/cms/configs",
-    icon: RiToolsFill,
+    icon: HardHat,
   },
 ];
 

@@ -10,7 +10,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { RiSettings2Fill } from "@remixicon/react";
+import { Settings } from "lucide-react";
 
 interface DataTableViewOptionsProps<TData> {
   table: Table<TData>;
@@ -23,7 +23,7 @@ export function DataTableViewOptions<TData>({
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="outline" size="sm" className="shadow-none">
-          <RiSettings2Fill className="mr-2 h-4 w-4" />
+          <Settings className="mr-2 h-4 w-4" />
           View
         </Button>
       </DropdownMenuTrigger>

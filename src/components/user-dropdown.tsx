@@ -13,13 +13,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { authClient } from "@/lib/auth-client";
 
-import {
-  RiSettingsLine,
-  RiTeamLine,
-  RiLogoutBoxLine,
-  RiSettings3Line,
-  RiLoader2Fill,
-} from "@remixicon/react";
+import { Settings, LogOut, LoaderCircle, SquareUserRound } from "lucide-react";
 import { useRouter } from "next/navigation";
 
 export function UserDropdown() {
@@ -41,7 +35,7 @@ export function UserDropdown() {
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" className="h-auto p-0 hover:bg-transparent">
           {isPending ? (
-            <RiLoader2Fill className="size-6 animate-spin" />
+            <LoaderCircle className="size-6 animate-spin" />
           ) : (
             <Avatar className="size-8">
               <AvatarImage
@@ -67,7 +61,7 @@ export function UserDropdown() {
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
           <DropdownMenuItem>
-            <RiSettingsLine
+            <SquareUserRound
               size={16}
               className="opacity-60"
               aria-hidden="true"
@@ -75,25 +69,13 @@ export function UserDropdown() {
             <span>Account</span>
           </DropdownMenuItem>
           <DropdownMenuItem>
-            <RiTeamLine size={16} className="opacity-60" aria-hidden="true" />
-            <span>Team</span>
-          </DropdownMenuItem>
-          <DropdownMenuItem>
-            <RiSettings3Line
-              size={16}
-              className="opacity-60"
-              aria-hidden="true"
-            />
+            <Settings size={16} className="opacity-60" aria-hidden="true" />
             <span>Settings</span>
           </DropdownMenuItem>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
         <DropdownMenuItem onClick={onSignOut}>
-          <RiLogoutBoxLine
-            size={16}
-            className="opacity-60"
-            aria-hidden="true"
-          />
+          <LogOut size={16} className="opacity-60" aria-hidden="true" />
           <span>Sign out</span>
         </DropdownMenuItem>
       </DropdownMenuContent>
